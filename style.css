@@ -1,6 +1,8 @@
-/* Default Light Theme */
+/* ================================
+   DEFAULT LIGHT THEME
+===================================*/
 :root {
-    --bg: linear-gradient(155deg, #10b2db, #406cb8,rgb(227, 97, 188));
+    --bg: linear-gradient(155deg, #10b2db, #406cb8, rgb(227, 97, 188));
     --text: #ffffff;
     --screen-bg: #ffffff;
     --btn-bg: rgba(255, 255, 255, 0.2);
@@ -10,7 +12,9 @@
     --clear-bg: #e844a9;
 }
 
-/* Dark Theme Colors */
+/* ================================
+   DARK THEME
+===================================*/
 .dark {
     --bg: linear-gradient(135deg, #0f0f0f, #232323);
     --text: #ffffff;
@@ -22,7 +26,9 @@
     --clear-bg: #bb138e;
 }
 
-/* Whole Page */
+/* ================================
+   PAGE BASE STYLES
+===================================*/
 body {
     margin: 0;
     padding: 0;
@@ -42,13 +48,13 @@ body {
     font-size: 40px;
     margin-bottom: 20px;
     letter-spacing: 2px;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background: linear-gradient(155deg, #ff09ce, #6c5df0, rgb(251, 1, 176));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* Theme Button */
+/* Theme Toggle Button */
 #themeBtn {
     padding: 10px 20px;
     background: #fff;
@@ -63,7 +69,7 @@ body {
     transform: scale(1.1);
 }
 
-/* Calculator Box */
+/* Calculator Container */
 .calculator {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
@@ -84,7 +90,7 @@ body {
     padding: 10px;
     border: none;
     margin-bottom: 15px;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 /* Buttons Layout */
@@ -104,15 +110,14 @@ button {
     border-radius: 10px;
     cursor: pointer;
     transition: 0.2s;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 button:hover {
     background: var(--btn-hover);
     transform: scale(1.05);
 }
 
-/* Operators */
+/* Operator Buttons */
 .op {
     background: var(--op-bg);
 }
@@ -128,4 +133,69 @@ button:hover {
     grid-column: span 4;
     background: var(--clear-bg);
     font-size: 22px;
+}
+
+
+
+/* 📱 Mobile (≤ 480px) */
+@media (max-width: 480px) {
+
+    .title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    #themeBtn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .calculator {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #display {
+        height: 55px;
+        font-size: 24px;
+        padding: 8px;
+    }
+
+    button {
+        padding: 14px;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+
+    .clear {
+        font-size: 18px;
+    }
+}
+
+/* 📲 Tablet (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .title {
+        font-size: 34px;
+        text-align: center;
+    }
+
+    .calculator {
+        width: 70%;
+        padding: 20px;
+    }
+
+    #display {
+        height: 60px;
+        font-size: 26px;
+    }
+
+    button {
+        padding: 16px;
+        font-size: 18px;
+    }
 }
